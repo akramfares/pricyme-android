@@ -41,12 +41,12 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
 }
 #header{
 	background: #FFCC33;
 	padding:2em 1em 2em 1em;
+	font-size:16px;
 }
 #header li{
 	list-style: none;
@@ -62,6 +62,41 @@ body {
 	margin-top: -2.5em;
 	margin-right: 0.5em;
 }
+
+.product{
+	margin-left:1.5em;
+	margin-right:1.5em;
+	margin-top:3em;
+	background: white;
+	/* border-left: 0.2em dotted #666666;
+	border-right: 0.2em dotted #666666; */
+	border-bottom: 0.2em dashed #666666;
+	text-align:center;
+	box-shadow: 0px 4px 15px #555;
+}
+.product img{
+	
+}
+
+.product .row-fluid{
+	text-align:left;
+	padding: 1em;
+	border-top : 1px solid #E5E5E5;
+	width: 94%;
+}
+
+.product-title{
+	font-size: 2em;
+	padding-top: 0.4em;
+}
+.product-heart{
+	text-align: center;
+}
+.product-ok{
+	text-align: center;
+}
+
+
 #accueil{
 	font-size: 3em;
 	text-align: center;
