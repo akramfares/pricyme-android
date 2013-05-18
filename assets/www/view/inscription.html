@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Inscription</title>
+ 
+ <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+</head>
+<style >
+ button.bInscription{padding: 12px 62px;}
+ button.bFacebook{padding: 10px  75px}
+  div.contenu{ margin-right: auto ;
+  }
+  body.bgkColor{background: #FFCC33;}
+  fieldset.fldColor{background: rgb(236, 220, 170);}
+  div.ou{
+  	  display: block;
+margin: 50;
+margin-bottom: 45px;
+font-size: 25px;
+font-style: italic;
+font-family: serif;
+text-align: center;
+color:rgb(250, 250, 248);
+  }
+
+div.PricyMe{
+
+	  display: block;
+margin: 50;
+margin-bottom: 45px;
+font-size: 50px;
+font-weight: bold;
+font-style: italic;
+font-family: serif;
+text-align: center;
+color:rgb(17, 17, 16);
+}
+
+div.offset9{margin-left: 310px;}
+
+</style>
+<body class="bgkColor">
+<div class="container  contenu">
+ <div class=header>
+  <div  class="PricyMe">
+      PricyMe
+     
+ </div>
+
+<div>
+  
+
+
+
+
+  <div class="span4  offset9 ">
+  	
+  	<div  >
+  <button  type="submit" id="saisirButton" name="saisirButton" class="btn btn-large btn-primary bFacebook" >Facebook Connect</button>
+     
+ </div>
+	<div  class="ou">
+   - Ou -
+     
+ </div>
+
+  <div class="hero-unit">
+   
+
+
+<legend></legend>
+<form method="post" action="../control/Controller.php?action=connexionAction">
+
+
+<label for="login">Email</label>
+<input type="Email" id="email" name="email" required />
+
+
+<td><label for="Password">Mot de passe</label>
+<td><input type="password" id="password" name="password" required />
+
+<label for="Password">confirme mot de passe</label></td>
+<input type="password" id="confirme" name="confirme" required />
+  <div  >
+ <button class="btn btn-large bInscription"  type="submit" id="saisirButton" name="saisirButton" >inscription</button>
+ </div>
+
+</form>
+
+
+</div>
+
+
+ 
+</div>	    
+
+</body>
+</html>
