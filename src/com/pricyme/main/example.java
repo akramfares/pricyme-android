@@ -20,6 +20,8 @@
 package com.pricyme.main;
 
 import android.os.Bundle;
+import android.view.View;
+
 import org.apache.cordova.*;
 
 public class example extends DroidGap
@@ -31,6 +33,9 @@ public class example extends DroidGap
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")
+        super.appView.setVerticalScrollBarEnabled(true);
+        // set scrollbar style
+        super.appView.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_OVERLAY);
     }
 }
 

@@ -1,98 +1,128 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <!-- Bootstrap -->
+    	<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    	<link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
 <title>Inscription</title>
  
- <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
 </head>
 <style >
- button.bInscription{padding: 12px 62px;}
- button.bFacebook{padding: 10px  75px}
-  div.contenu{ margin-right: auto ;
-  }
+ 
   body.bgkColor{background: #FFCC33;}
-  fieldset.fldColor{background: rgb(236, 220, 170);}
-  div.ou{
-  	  display: block;
-margin: 50;
-margin-bottom: 45px;
-font-size: 25px;
-font-style: italic;
-font-family: serif;
-text-align: center;
-color:rgb(250, 250, 248);
-  }
-
-div.PricyMe{
-
-	  display: block;
-margin: 50;
-margin-bottom: 45px;
-font-size: 50px;
+ h3.PricyMe{
+  
+font-size: 6em;
 font-weight: bold;
 font-style: italic;
 font-family: serif;
 text-align: center;
-color:rgb(17, 17, 16);
+color: rgb(17, 17, 16);
 }
+div.btFacebook{
+  
+font-size: 1.5em;
+}
+button.taille{
+font-size: 1.8em;
+font-size: 1.9em;
+font-weight: bold;
+color: white;
+background-color: blue;
 
-div.offset9{margin-left: 310px;}
+}
+ div.ou{
+  
+font-size: 3em;
+margin-top: 1em;
+font-weight: bold;
+font-style: italic;
+font-family: serif;
+text-align: center;
+color: rgb(250, 250, 248);
+  }
+  p.ou{
+margin-left: 30px;
+font-size:.9em;
+font-style: italic;
+font-family: serif;
+text-align: center;
+color: rgb(250, 250, 248);
 
+  }
+div.formulaire{
+margin-left: 25px;
+margin-right: 25px;
+margin-top: 2em;
+background-color: rgb(250, 250, 248);
+padding: 1em;
+font-size: 25px;
+
+}
+input.test{
+
+background-image: none;
+padding: .4em;
+margin: .5em 0;
+margin-left: 24px;
+line-height: 1.4;
+font-size: 3em;
+display: block;
+width: 96%;
+outline: 0;
+}
+label.labText{
+  font-size: 1em;
+font-weight: bold;
+text-align: center;
+color: rgb(17, 17, 16);
+}
 </style>
 <body class="bgkColor">
-<div class="container  contenu">
- <div class=header>
-  <div  class="PricyMe">
-      PricyMe
      
- </div>
-
-<div>
+  <h3 class="PricyMe">PricyMe</h3>
+      
+</div>
+<div id="container" style="text-align: center; margin-top: 6em;">
   
 
+         
+<div class="btFacebook">
+ <button type="submit" id="saisirButton" name="saisirButton" class="taille btn btn-large btn-primary bFacebook" style="padding: 0.5em;" >Facebook Connect</button>
+</div> 
+<div  class="ou">
+ <p>-Ou-</p>
+</div>     
 
-
-
-  <div class="span4  offset9 ">
-  	
-  	<div  >
-  <button  type="submit" id="saisirButton" name="saisirButton" class="btn btn-large btn-primary bFacebook" >Facebook Connect</button>
-     
- </div>
-	<div  class="ou">
-   - Ou -
-     
- </div>
-
-  <div class="hero-unit">
+<div class="formulaire">
    
 
 
 <legend></legend>
-<form method="post" action="../control/Controller.php?action=connexionAction">
+<form method="post" action="">
 
 
-<label for="login">Email</label>
-<input type="Email" id="email" name="email" required />
+<label for="login" class="labText">Email</label>
+<input class="test" type="Email" id="email" name="email" />
 
 
-<td><label for="Password">Mot de passe</label>
-<td><input type="password" id="password" name="password" required />
+<td><label  for="Password" class="labText" >Mot de passe</label>
+<td><input class="test" type="password" id="password" name="password" />
 
-<label for="Password">confirme mot de passe</label></td>
-<input type="password" id="confirme" name="confirme" required />
-  <div  >
- <button class="btn btn-large bInscription"  type="submit" id="saisirButton" name="saisirButton" >inscription</button>
- </div>
+<label for="Password" class="labText">confirme mot de passe</label></td>
+<input class="test" type="password" id="confirme" name="confirme" />
+  
 
+<div>
+<button class="taille btn btn-large bInscription "  type="submit" id="saisirButton" name="saisirButton" style="color: black;padding: 0.5em;">inscription</button>
+</div> 
 </form>
-
-
 </div>
-
-
- 
-</div>	    
-
 </body>
 </html>
