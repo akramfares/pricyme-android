@@ -12,25 +12,16 @@
     </head>
     <body>
     	<div id="header">
-		  <div>
-		  		<li class="dropdown">
-	              <a class="dropdown-toggle" id="header-titre" role="button" data-toggle="dropdown" href="#">Tableau de board <i class="icon-caret-down"></i></a>
-	              <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mon profil</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ajouter</a></li>
-	                <li role="presentation" class="divider"></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Paramètres</a></li>
-	              </ul>
-	        </li>
-		  </div>
-		  
-		  <div id="header-right">
-		  	<div class="popover top" style=" display: inline; top: 2em; right: 7em; background: red;">
-		  		<div class="arrow"></div>
-		  		<div class="popover-content" style="font-weight: bold; color:white; font-size: 1.5em;">6</div>
-		  	</div>
-		  	<i class="icon-plus-sign icon-3x" style="margin-right: 14px;"></i>
-		  </div>
+          <div>
+                  <a class="dropdown-toggle" id="header-titre" role="button" data-toggle="dropdown" href="#">PricyMe</a>
+          </div>
+          
+          <div id="header-right">
+            <div class="popover top" id="notification">
+                <div class="arrow"></div>
+                <div class="popover-content" style="font-weight: bold; color:white; font-size: 1.5em;">6</div>
+            </div>
+          </div>
         </div>
         
         <div id="container">
@@ -102,6 +93,15 @@
         		<div class="span6 name"><img alt="" src="../img/cordova.png" style="height: 2.5em; margin-right:5px;"> Akram Fares</div>
         		<div class="span6 time" >Il y a 32 minutes</div>
         	</div>
+        </div>
+
+        <div id="footer">
+            <div class="row-fluid" style="text-align:center;">
+                <span class="span3"><i class="icon-th-large icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-user icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-search icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-plus-sign icon-3x" style="margin-right: 14px;"></i></span>
+            </div>
         </div>
         
         <script type="text/javascript" src="../cordova-2.7.0.js"></script>

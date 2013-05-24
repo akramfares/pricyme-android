@@ -14,23 +14,14 @@
     <body>
     	<div id="header">
 		  <div>
-		  		<li class="dropdown">
-	              <a class="dropdown-toggle" id="header-titre" role="button" data-toggle="dropdown" href="#">Ajouter un produit <i class="icon-caret-down"></i></a>
-	              <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mon profil</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ajouter</a></li>
-	                <li role="presentation" class="divider"></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Paramètres</a></li>
-	              </ul>
-	        </li>
+	              <a class="dropdown-toggle" id="header-titre" role="button" data-toggle="dropdown" href="#">PricyMe</a>
 		  </div>
 		  
 		  <div id="header-right">
-		  	<div class="popover top" style=" display: inline; top: 2em; right: 7em; background: red;">
+		  	<div class="popover top" id="notification">
 		  		<div class="arrow"></div>
 		  		<div class="popover-content" style="font-weight: bold; color:white; font-size: 1.5em;">6</div>
 		  	</div>
-		  	<i class="icon-plus-sign icon-3x" style="margin-right: 14px;"></i>
 		  </div>
         </div>
         
@@ -41,9 +32,18 @@
             	Appuyez ici pour ajouter une photo
             </div>
             <div style="font-size: 1.5em; margin: 1.5em 0 1.5em;">
-            <label style="font-size: 140%;">Je vend ce produit <input type="checkbox" class="ios-switch" /></label>
+            <label style="font-size: 140%;">Je vend ce produit <input type="checkbox" class="ios-switch" style="width:10%" /></label>
             </div>
             <div><button type="submit" class="btn">Envoyer</button></div>
+        </div>
+
+        <div id="footer">
+            <div class="row-fluid" style="text-align:center;">
+                <span class="span3"><i class="icon-th-large icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-user icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-search icon-3x" style="margin-right: 14px;"></i></span>
+                <span class="span3"><i class="icon-plus-sign icon-3x" style="margin-right: 14px;"></i></span>
+            </div>
         </div>
         
         

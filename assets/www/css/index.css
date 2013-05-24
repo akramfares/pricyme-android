@@ -29,19 +29,39 @@ body {
     font-size:12px;
     height:100%;
     margin:0px;
-    padding:0px;
+    padding-bottom: 9em;
+    padding-top: 8em;
     width:100%;
 }
 #header{
 	background: #FFCC33;
-	padding:2em 1em 1.5em 1em;
+	padding:1.2em 1em 1.2em 1em;
 	font-size:16px;
 	position: fixed; 
 	top: 0px; 
 	left: 0px;
 	width: 98%;
 	z-index: 1000;
+	box-shadow: 0px -2px 20px #555;
+	-webkit-box-shadow: 0px -2px 20px #555;
+	-moz-box-shadow: 0px -2px 20px #555;
 }
+
+#footer{
+  background: #FFCC33;
+  color:#ff9a15;
+  padding: .5em 1em 0.5em 1em;
+  font-size: 1.5em;
+  position: fixed; 
+  bottom: 0px; 
+  left: 0px;
+  width: 98%;
+  z-index: 1000;
+  box-shadow: 0px 7px 27px #555;
+  -webkit-box-shadow: 0px 7px 27px #555;
+  -moz-box-shadow: 0px 7px 27px #555;
+}
+
 #header li{
 	list-style: none;
 }
@@ -56,6 +76,12 @@ body {
 	margin-top: -2.5em;
 	margin-right: 0.5em;
 }
+#notification{
+   display: inline; 
+   top: 1em; 
+   right: 2.5em; 
+   background: red;
+}
 #header-titre{
 	font-size:2em; 
 	color:#A34100;
@@ -63,8 +89,8 @@ body {
 }
 
 #container{
-	margin-top: 11em;
-	margin-bottom: 3em;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .product{
@@ -77,6 +103,8 @@ body {
 	border-bottom: 0.2em dashed #666666;
 	text-align:center;
 	box-shadow: 0px 4px 15px #555;
+	-webkit-box-shadow: 0px 4px 15px #555;
+	-moz-box-shadow: 0px 4px 15px #555;
 }
 .product img{
 	
@@ -122,8 +150,8 @@ body {
 }
 
 #container-product{
-  margin-top: 11em;
-  margin-bottom: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 #container-product #title{
   font-size: 3em;
@@ -135,6 +163,12 @@ body {
 }
 #container-product #image{
   text-align: center;
+  padding: 0 1em 0;
+}
+#container-product #image img{
+	box-shadow: 0px 4px 15px #555;
+	-webkit-box-shadow: 0px 4px 15px #555;
+	-moz-box-shadow: 0px 4px 15px #555;
 }
 #container-product .row-fluid{
   text-align: center;
@@ -148,8 +182,8 @@ body {
 }
 
 #container-add{
-  margin-top: 11em;
-  margin-bottom: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
 }
 #container-add input{
