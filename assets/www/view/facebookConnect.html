@@ -153,6 +153,7 @@ padding: 2em;
                                  userFire.child('picture').set(response.picture);
                                  // Auto increment id
                                  usersFire.child('count').set(count);
+                                 // Create info file
                                  userFire.once('value', function(data2) {
                                 	 var jsArray = data2.exportVal();
                                      var myJsonString = JSON.stringify(jsArray);
@@ -164,6 +165,7 @@ padding: 2em;
                         	 }
                         	 // User already exists
                         	 else{
+                        		// Create info file
                         		 var jsArray = data1.exportVal();
                                  var myJsonString = JSON.stringify(jsArray);
                                  alert(myJsonString);
