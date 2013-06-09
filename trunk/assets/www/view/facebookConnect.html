@@ -59,7 +59,7 @@ padding: 2em;
         
         <!-- <script type="text/javascript" src="../cordova-2.7.0.js"></script> -->
 			<!-- cordova -->
-			 <script type="text/javascript" src="../js/cordova-2.5.0.js"></script>
+			 <script type="text/javascript" src="../js/cordova-2.6.0.js"></script>
 		 <!-- cordova facebook plugin -->
 		<script src="../js/cdv-plugin-fb-connect.js"></script>
 	    <!-- facebook js sdk -->
@@ -68,6 +68,7 @@ padding: 2em;
         <script type="text/javascript" src="../js/jquery.js"></script>
         <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
         <script type="text/javascript" src="../js/md5.js"></script>
+        <script type="text/javascript" src="../js/model.js"></script>
         <script>
            
             var friendIDs = [];
@@ -132,48 +133,29 @@ padding: 2em;
                      count = parseInt(data.val().count);
 
                      FB.api('/me?fields=currency,picture,first_name,last_name,email,bio,location', function(response) {
-                         var userFire;
-                         // Create id from MD5(email)
-                         var emailMD5 = CryptoJS.MD5(response.email).toString();
-                         userFire = new Firebase("https://pricyme.firebaseio.com/users/"+emailMD5);
                          
-                         userFire.once('value', function(data1) {
-                        	 // User Doesn't exist
-                        	 if(data1.val() == null){
-                        		// Set users infos
-                                 count++;
-                                 userFire.child('id').set(count);
-                                 userFire.child('facebook_id').set(response.id);
-                                 userFire.child('first_name').set(response.first_name);
-                                 userFire.child('last_name').set(response.last_name);
-                                 userFire.child('email').set(response.email);
-                                 userFire.child('about').set(response.bio);
-                                 userFire.child('adress').set(response.location);
-                                 userFire.child('currency').set(response.currency);
-                                 userFire.child('picture').set(response.picture);
-                                 // Auto increment id
-                                 usersFire.child('count').set(count);
-                                 // Create info file
-                                 userFire.once('value', function(data2) {
-                                	 var jsArray = data2.exportVal();
-                                     var myJsonString = JSON.stringify(jsArray);
-                                     alert(myJsonString);
-                                     writeToFile("user.txt",myJsonString);
-                                     //readFromFile("user.txt"); // Now userData is filled with JSON
-                                     
-                                 });
-                        	 }
-                        	 // User already exists
-                        	 else{
-                        		// Create info file
-                        		 var jsArray = data1.exportVal();
-                                 var myJsonString = JSON.stringify(jsArray);
-                                 alert(myJsonString);
-                                 writeToFile("user.txt",myJsonString);
-                                 //readFromFile("user.txt"); // Now userData is filled with JSON
-                        	 }
-                         });
-                        
+                    	// Instanciation de l'objet
+                    	 var user = new User();
+                    	 user.username = response.username;
+                    	 user.facebook_id = response.id;
+                    	 user.first_name = response.first_name;
+                    	 user.last_name = response.last_name; 
+                    	 user.email = response.email;
+                    	 user.about = response.bio;
+                    	 user.adress = response.location.name;
+                    	 user.currency = response.currency.user_currency;
+                    	 user.picture = response.picture.data.url;
+                    	 
+                    	// Envoie du JSON au serveur
+                    	 $.post("http://pricy.me/web/app_dev.php/api/user/new?json="+user.getJSON(), {})
+                    	 .done(function(data) {
+
+                    	   // On récupère le résultat
+                    	   alert("Data Loaded: " + data);
+                    	   writeToFile("user.txt",data);
+                    	 })
+                    	 .fail(function(data) { alert("error : "+ JSON.stringify(data)); })
+                    	 .always(function() { alert("finished"); });
                          
                      });
                  
